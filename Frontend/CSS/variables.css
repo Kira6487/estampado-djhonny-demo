@@ -1,0 +1,20 @@
+:root {
+  --color-carbon: #363435;
+  --color-black: #20201f;
+  --color-lime: #aacf47;
+  --color-green-accessible: #657c1f;
+  --color-white: #ffffff;
+  --color-warm-white: #f7f7f5;
+  --color-gray-light: #e6e7e9;
+  --color-gray: #6b6b6b;
+  --font-display: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  --font-body: Inter, Roboto, Arial, sans-serif;
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --radius-sm: .5rem;
+  --radius-md: .875rem;
+  --shadow-card: 0 10px 30px rgba(32, 32, 31, .08);
+}

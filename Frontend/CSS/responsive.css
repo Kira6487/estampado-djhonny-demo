@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+  .topbar__inner { justify-content: flex-start; }
+  .page-hero { padding: 6rem 0; }
+  .admin-main { padding: var(--space-4); }
+}
+
+@media (min-width: 1024px) {
+  .site-header .navbar-nav { gap: .2rem; }
+  .admin-sidebar { position: sticky; top: 0; }
+}
+
+@media (min-width: 1440px) {
+  .page-hero { padding: 7.5rem 0; }
+}
+
+@media (max-width: 767.98px) {
+  .topbar__inner { flex-wrap: wrap; gap: .25rem 1rem; }
+  .brand-logo { height: 54px; }
+  .navbar-collapse { padding-bottom: .75rem; }
+  .page-hero { padding: 3.5rem 0; }
+  .admin-sidebar { min-height: auto; }
+}
