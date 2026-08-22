@@ -2,6 +2,7 @@
   .topbar__inner { justify-content: flex-start; }
   .page-hero { padding: 6rem 0; }
   .admin-main { padding: var(--space-4); }
+  .product-card__media { height: 240px; }
 }
 
 @media (min-width: 1024px) {

@@ -22,5 +22,6 @@ Correo, dirección, horario y URL de Facebook requieren validación. TikTok y Yo
 ## Auditoría de recursos y rutas
 
 - Hay 22 archivos gráficos de producto/marca/canales; 17 familias tienen imagen directa y 3 familias no tienen foto específica.
+- En la Fase 2, las tres familias sin imagen se muestran con un placeholder local de marca en CSS; no se reutiliza la fotografía de otro producto.
 - No existe imagen de Instagram o YouTube pese a mostrarse en la referencia visual.
 - Antes de incorporar tarjetas en la fase 2, verificar el soporte de `BOLSATSHIRT.avif` en los navegadores objetivo; se conserva el archivo original.
