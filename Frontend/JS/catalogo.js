@@ -1,9 +1,10 @@
-/* Funcionalidades públicas de Fase 2. No hay persistencia ni backend. */
+/* Funcionalidades públicas. El catálogo puede reflejar la demostración local del panel. */
 (() => {
-  const productos = window.CATALOGO_PRODUCTOS || [];
-  const categorias = window.CATEGORIAS_PRODUCTO || [];
+  const store = window.CatalogoStore;
+  const productos = (store ? store.obtener() : (window.CATALOGO_PRODUCTOS || [])).filter((producto) => producto.estado !== "Oculto");
+  const categorias = store ? store.categorias() : (window.CATEGORIAS_PRODUCTO || []);
   const configuracion = window.CONFIGURACION_COMERCIAL || {};
-  const baseImagenes = `${document.body.dataset.level || ".."}/images`;
+  const baseImagenes = `${document.body.dataset.level || "."}/images`;
   const moneda = new Intl.NumberFormat("es-PE", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
   const escapar = (valor) => String(valor ?? "").replace(/[&<>"]/g, (caracter) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[caracter]));
@@ -29,6 +30,8 @@
     </article>`;
 
   const renderDestacados = () => {
+    const enlaceCatalogo = document.querySelector("[data-catalog-total]");
+    if (enlaceCatalogo) enlaceCatalogo.textContent = `Ver los ${productos.length} productos`;
     const contenedor = document.querySelector("[data-featured-products]");
     if (!contenedor) return;
     const destacados = productos.filter((producto) => producto.destacado).filter((producto) => producto.imagenDisponible).slice(0, 6);

@@ -19,6 +19,13 @@
 
 Correo, dirección, horario y URL de Facebook requieren validación. TikTok y YouTube aparecen en la hoja de contenido pero no están respaldados por el PDF. No se activan como enlaces comerciales finales en esta fase.
 
+## Limitaciones del panel demostrativo
+
+- El acceso `admin@djhonny.demo` / `Demo1234!` es únicamente didáctico. La sesión se guarda en `sessionStorage`; no ofrece seguridad real.
+- Las ediciones del panel se guardan solo en `localStorage` del navegador actual; no se sincronizan entre dispositivos ni con Vercel.
+- Las imágenes se seleccionan de los archivos existentes. No hay carga de archivos ni almacenamiento de imágenes en Base64.
+- El botón “Restaurar catálogo original” descarta los cambios locales y vuelve a cargar los datos de `productos.js`.
+
 ## Auditoría de recursos y rutas
 
 - Hay 22 archivos gráficos de producto/marca/canales; 17 familias tienen imagen directa y 3 familias no tienen foto específica.

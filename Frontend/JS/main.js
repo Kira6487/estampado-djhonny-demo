@@ -5,10 +5,10 @@
     whatsappPendienteValidacion: true
   };
 
-  const level = document.body.dataset.level || "..";
+  const level = document.body.dataset.level || ".";
   const isAdmin = document.body.dataset.area === "admin";
   const page = document.body.dataset.page || "inicio";
-  const publicBase = `${level}/HTML`;
+  const publicBase = level;
   const assetBase = `${level}/images`;
   const navLink = (id, href, label) => `<li class="nav-item"><a class="nav-link ${page === id ? "active" : ""}" ${page === id ? 'aria-current="page"' : ""} href="${href}">${label}</a></li>`;
 

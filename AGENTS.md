@@ -2,7 +2,7 @@
 
 ## Estructura
 
-- `Frontend/HTML/`: páginas públicas y la estructura visual de administración.
+- `Frontend/`: páginas públicas (`index.html`, `catalogo.html`, `producto.html`, `contacto.html`) y `admin/` para el panel demostrativo.
 - `Frontend/CSS/`: variables, estilos compartidos y reglas responsive.
 - `Frontend/JS/`: datos reutilizables del catálogo y comportamiento vanilla.
 - `Frontend/images/`: recursos originales entregados; no se modifican ni reemplazan.
@@ -26,6 +26,7 @@
 
 ## Ejecutar y verificar
 
-- Abrir `Frontend/HTML/index.html` con un servidor local, por ejemplo: `python3 -m http.server 8000 --directory Frontend`.
-- Verificar las rutas públicas en `/HTML/` y administración en `/HTML/admin/` a 320, 768, 1024 y 1440 px.
+- Ejecutar `python3 -m http.server 8000 --directory Frontend` y abrir `http://localhost:8000/`.
+- Verificar rutas públicas en `/`, `/catalogo.html`, `/producto.html` y `/contacto.html`, y administración en `/admin/` a 320, 768, 1024 y 1440 px.
+- El CRUD demostrativo usa `localStorage`; `productos.js` no se modifica desde el navegador y los cambios deben poder restaurarse.
 - Antes de finalizar: revisar enlaces relativos, consola sin errores, contraste básico, HTML semántico y que no se hayan modificado imágenes originales.
